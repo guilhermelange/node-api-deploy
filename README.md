@@ -2,4 +2,5 @@
 Sample application build on Typescript with Express.
 
 ### Link to Project Issue
-Another link pass
+Another link pass. Full workflow using protected branchs.
+
