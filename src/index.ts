@@ -12,7 +12,7 @@ const app = express()
 app.get('/', (req, res) => {
     res.json({
         status: "OK",
-        project: "node-api-deploy",
+        name: "node-api-deploy",
         datetime: (new Date()).toISOString(),
         uuid: uuidv4()
     })
