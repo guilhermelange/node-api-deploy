@@ -15,5 +15,7 @@ RUN npm ci --omit=dev
 # Bundle app source
 COPY . .
 
+LABEL org.opencontainers.image.source=https://github.com/guilhermelange/node-api-deploy
+
 EXPOSE 3000
 CMD [ "node", "dist/index.js" ]
