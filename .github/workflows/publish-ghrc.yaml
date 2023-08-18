@@ -1,0 +1,15 @@
+name: Docker Image CI for GHRC
+
+on:
+  push
+
+jobs:
+  build_and_publish:
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and push the image
+        run: |
+          docker login --username guilhermelange --password ${{secrets.GH_PAT}} ghcr.io
+          docker build . --tag ghcr.io/guilhermelange/node-api-deploy:latest
+          docker push ghcr.io/guilhermelange/node-api-deploy:latest
